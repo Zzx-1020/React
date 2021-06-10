@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数式组件</title>
+</head>
+
+<body>
+    <!-- 创建一个容器 -->
+    <div id="test"></div>
+    <!-- 引入JS库 -->
+    <!-- 引入react核心库 -->
+    <script src="https://unpkg.com/react@ 17/umd/react.development.js" crossorigin></script>
+    <!-- 引入react-dom,用于支持react操作dom -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- 引入babel，将jsx转换为js -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //    创建函数式组件
+        //    在组件中，会开启严格模式，此处的this指向会显示undifined而不是指向window
+        function MyComponent() {
+            // console.log(this);
+            return <h2>我是用函数定义的组件（适用于【简单组件】的定义）</h2>
+        }
+        // 渲染组件
+        ReactDOM.render(<MyComponent />, document.getElementById('test'))
+    </script>
+</body>
+
+</html>
